@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.Optional;
+
 @SpringBootApplication
 public class SpringDataJpaExampleApplication {
 
@@ -33,8 +35,11 @@ public class SpringDataJpaExampleApplication {
 //		repo.save(s2);
 //		repo.save(s3);
 
-		System.out.println(repo.findAll()); //findall is also one of the JPA methods. You see how JPA is helping us without writing so much of code. Otherwise we would have to make the methods and then run our applicaation.
+//		System.out.println(repo.findAll()); //findall is also one of the JPA methods. You see how JPA is helping us without writing so much of code. Otherwise we would have to make the methods and then run our applicaation.
 
+		//The reason to do this, because optinal helps us handle null expection. Like if this 104 doesn't exist, then instead of use saying null directly this will give use the data.
+		Optional<StudentJPA> s = repo.findById(103);
+		System.out.println(s.orElse(new StudentJPA()));
 	}
 
 }
