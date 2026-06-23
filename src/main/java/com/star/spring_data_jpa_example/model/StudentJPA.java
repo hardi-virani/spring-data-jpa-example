@@ -1,18 +1,18 @@
 package com.star.spring_data_jpa_example.model;
 
-import org.springframework.beans.factory.annotation.Value;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
 @Component
 @Scope("prototype")
-public class Student {
-
-    //    @Value("25")
+@Entity
+public class StudentJPA {
+    @Id
     private int rollNo;
 
-    //    @Value("Hardi")
     private String name;
     private int marks;
 
@@ -47,7 +47,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentJPA{" +
                 "rollNo=" + rollNo +
                 ", name='" + name + '\'' +
                 ", marks=" + marks +
