@@ -17,21 +17,23 @@ public class SpringDataJpaExampleApplication {
 		StudentJPA s2 = context.getBean(StudentJPA.class);
 		StudentJPA s3 = context.getBean(StudentJPA.class);
 
-		s1.setRollNo(101);
-		s1.setName("Hardi");
-		s1.setMarks(75);
+//		s1.setRollNo(101);
+//		s1.setName("Hardi");
+//		s1.setMarks(75);
+//
+//		s2.setRollNo(102);
+//		s2.setName("star");
+//		s2.setMarks(80);
+//
+//		s3.setRollNo(103);
+//		s3.setName("Mann");
+//		s3.setMarks(70);
+//
+//		repo.save(s1); //Well this save() method is coming from JPA repository which we have extended in StudentJPARepo interface.
+//		repo.save(s2);
+//		repo.save(s3);
 
-		s2.setRollNo(102);
-		s2.setName("star");
-		s2.setMarks(80);
-
-		s3.setRollNo(103);
-		s3.setName("Mann");
-		s3.setMarks(70);
-
-		repo.save(s1); //Well this save() method is coming from JPA repository which we have extended in StudentJPARepo interface.
-		repo.save(s2);
-		repo.save(s3);
+		System.out.println(repo.findAll()); //findall is also one of the JPA methods. You see how JPA is helping us without writing so much of code. Otherwise we would have to make the methods and then run our applicaation.
 
 	}
 
