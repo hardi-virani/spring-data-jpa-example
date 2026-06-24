@@ -19,9 +19,9 @@ public class SpringDataJpaExampleApplication {
 		StudentJPA s2 = context.getBean(StudentJPA.class);
 		StudentJPA s3 = context.getBean(StudentJPA.class);
 
-//		s1.setRollNo(101);
-//		s1.setName("Hardi");
-//		s1.setMarks(75);
+		s1.setRollNo(101);
+		s1.setName("Hardi");
+		s1.setMarks(2);
 //
 //		s2.setRollNo(102);
 //		s2.setName("star");
@@ -41,9 +41,15 @@ public class SpringDataJpaExampleApplication {
 //		Optional<StudentJPA> s = repo.findById(103);
 //		System.out.println(s.orElse(new StudentJPA()));
 
-		System.out.println(repo.findbyName("Mann"));
+//		System.out.println(repo.findbyName("Mann"));
 
-		System.out.println(repo.findByMarksGreaterThan(74));
+//		System.out.println(repo.findByMarksGreaterThan(74));
+
+
+		repo.save(s1);
+
+
+//		repo.delete(s2);
 	}
 
 }
