@@ -42,6 +42,8 @@ public class SpringDataJpaExampleApplication {
 //		System.out.println(s.orElse(new StudentJPA()));
 
 		System.out.println(repo.findbyName("Mann"));
+
+		System.out.println(repo.findByMarksGreaterThan(74));
 	}
 
 }

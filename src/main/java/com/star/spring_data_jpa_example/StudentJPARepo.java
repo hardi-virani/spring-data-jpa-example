@@ -13,6 +13,8 @@ public interface StudentJPARepo extends JpaRepository<StudentJPA, Integer> {
     @Query("select s from StudentJPA s where s.name = ?1") // ? will be replaced by name and 1 is for the first parameter and further more.
     List<StudentJPA> findbyName(String name);
 
+    List<StudentJPA> findByMarksGreaterThan(int marks);
+
 
 
 }
